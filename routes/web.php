@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
-use App\Http\Controllers\ProfileController;
+
 
 
 /*
@@ -30,6 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/todo', [TodoController::class, 'index'])->name('todo.index');
+    Route::post('/todo', [TodoController::class, 'store'])->name('todo.store');
     Route::get('/todo/create', [TodoController::class, 'create'])->name('todo.create');
     Route::get('/todo/edit', [TodoController::class, 'edit'])->name('todo.edit');
 
