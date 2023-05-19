@@ -17,15 +17,15 @@ class UserController extends Controller
                 ->orWhere('email', 'like', '%' . $search . '%');
             })
             ->orderBy('name')
-            ->where('id', '! =', '1')
+            ->where('id', '!=', '1')
             ->paginate(20)
             ->withQueryString();
         }else{
-            $users = User::where('id', '! =', '1')
+            $users = User::where('id', '!=', '1')
             ->orderBy('name')
             ->paginate(10);
         }
-
+        //dd($users->toArray());
         return view('user.index', compact('users'));
     }
 

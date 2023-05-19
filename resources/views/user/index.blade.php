@@ -74,7 +74,7 @@
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 <p>{{ $user->id }}</p>
                                 </td>
-<td class="px-6 py-4 font-medium text-gray-900 md:whitespace-nowrap dark:text-white">
+                                <td class="px-6 py-4 font-medium text-gray-900 md:whitespace-nowrap dark:text-white">
                                 <p>{{ $user->name }}</p>
                                 </td>
 
