@@ -126,6 +126,6 @@ class TodoController extends Controller
             $todo->delete();
         }
         // dd($todosCompleted);
-        retx'urn redirect()->route('todo.inde)->with('success', 'All completed todos deleted successfully!');
+        return redirect()->route('todo.index')->with('success', 'All completed todos deleted successfully!');
     }
 }
