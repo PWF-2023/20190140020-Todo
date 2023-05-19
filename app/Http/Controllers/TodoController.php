@@ -95,6 +95,7 @@ class TodoController extends Controller
         }
     }
 
+
     public function uncomplete(Todo $todo)
     {
         if (auth()->user()->id == $todo->user_id){
